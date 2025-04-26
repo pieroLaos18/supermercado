@@ -8,7 +8,11 @@ use App\Http\Controllers\ProfileController;
 
 // Página de inicio
 Route::get('/', function () {
-    return redirect()->route('productos.index');
+    return view('welcome');
+});
+
+Route::get('/', function () {
+    return redirect('/productos');
 });
 
 // Dashboard (solo si está autenticado y verificado)
