@@ -22,6 +22,7 @@ RUN php artisan config:cache
 
 # Puerto que expone Laravel
 EXPOSE 8000
+RUN chmod -R 775 storage bootstrap/cache
 
 # Comando para iniciar Laravel
 CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
